@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tremolo.h"
 #include "vibrato.h"
+#include "distortion.h"
 
 /*
   For each new effect:
@@ -21,6 +22,9 @@ namespace upc {
 	else if (name == "Vibrato") {
       pEffect = (Effect *) new Vibrato(parameters);
     }
+  else if (name == "Distortion") {
+    pEffect = (Effect *) new Distortion(parameters);
+  }
     return pEffect;
   }
 }
